@@ -6,8 +6,6 @@ set(CMAKE_CXX_FLAGS "-O2 -fPIC -std=gnu++11")
 
 find_package(OpenAL REQUIRED)
 find_package(PhysFS REQUIRED)
-find_package(Java REQUIRED)
-find_package(JNI REQUIRED)
 find_package(LibSndFile REQUIRED)
 
 include_directories(${OPENAL_INCLUDE_DIR})
