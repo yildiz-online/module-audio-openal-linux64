@@ -12,8 +12,8 @@ find_package(LibSndFile REQUIRED)
 
 include_directories(${OPENAL_INCLUDE_DIR})
 include_directories(${PHYSFS_INCLUDE_DIR})
-include_directories(${JNI_INCLUDE_DIRS})
-include_directories(${JNI_INCLUDE_DIRS}/linux)
+include_directories("java/include")
+include_directories("java/include/linux")
 include_directories(${LIBSNDFILE_INCLUDE_DIR})
 
 file(
