@@ -72,6 +72,7 @@
           <artifactId>component-native-libsndfile</artifactId>
           <version>1.0.29.2</version>
         </dependency>
+        <!--FIXME use module vfs insteaf component once linux version is ready -->
         <dependency>
           <groupId>be.yildiz-games</groupId>
           <artifactId>component-native-physicsfs</artifactId>
