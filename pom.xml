@@ -48,13 +48,19 @@
 
   <properties>
     <nativeEnv>linux64</nativeEnv>
+    <module-openal.version>2.0.11</module-openal.version>
+    <module-physfs.version>1.0.0-SNAPSHOT</module-physfs.version>
+    <component-physfs.version>3.0.1.1</component-physfs.version>
+    <component-alsa.version>1.1.5.3</component-alsa.version>
+    <component-openal.version>1.18.1.1</component-openal.version>
+    <component-libsndfile.version>1.0.29.2</component-libsndfile.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>be.yildiz-games</groupId>
       <artifactId>module-audio-openal</artifactId>
-      <version>2.0.11</version>
+      <version>${module-openal.version}</version>
     </dependency>
   </dependencies>
 
@@ -65,23 +71,27 @@
         <dependency>
           <groupId>be.yildiz-games</groupId>
           <artifactId>component-native-openal</artifactId>
-          <version>1.18.1.1</version>
+          <version>${component-openal.version}</version>
         </dependency>
         <dependency>
           <groupId>be.yildiz-games</groupId>
           <artifactId>component-native-libsndfile</artifactId>
-          <version>1.0.29.2</version>
+          <version>${component-libsndfile.version}</version>
         </dependency>
-        <!--FIXME use module vfs insteaf component once linux version is ready -->
+        <dependency>
+          <groupId>be.yildiz-games</groupId>
+          <artifactId>module-vfs-physfs-linux64</artifactId>
+          <version>${module-physfs.version}</version>
+        </dependency>
         <dependency>
           <groupId>be.yildiz-games</groupId>
           <artifactId>component-native-physicsfs</artifactId>
-          <version>3.0.1.1</version>
+          <version>${component-physfs.version}</version>
         </dependency>
         <dependency>
           <groupId>be.yildiz-games</groupId>
           <artifactId>component-native-alsa</artifactId>
-          <version>1.1.5.3</version>
+          <version>${component-alsa.version}</version>
         </dependency>
       </dependencies>
       <build>
@@ -101,30 +111,42 @@
                     <artifactItem>
                       <groupId>be.yildiz-games</groupId>
                       <artifactId>module-audio-openal</artifactId>
+                      <version>${module-openal.version}</version>
                       <outputDirectory>src/</outputDirectory>
                       <includes>main/**/*.*</includes>
                     </artifactItem>
                     <artifactItem>
                       <groupId>be.yildiz-games</groupId>
+                      <artifactId>module-vfs-physfs-linux64</artifactId>
+                      <version>${module-physfs.version}</version>
+                      <outputDirectory>src/main/scripts/linux64/physicsfs</outputDirectory>
+                      <includes>linux64/**/*.*</includes>
+                    </artifactItem>
+                    <artifactItem>
+                      <groupId>be.yildiz-games</groupId>
                       <artifactId>component-native-openal</artifactId>
+                      <version>${component-openal.version}</version>
                       <outputDirectory>src/main/scripts/linux64/openal</outputDirectory>
                       <includes>linux64/**/*.*</includes>
                     </artifactItem>
                     <artifactItem>
                       <groupId>be.yildiz-games</groupId>
                       <artifactId>component-native-libsndfile</artifactId>
+                      <version>${component-libsndfile.version}</version>
                       <outputDirectory>src/main/scripts/linux64/libsndfile</outputDirectory>
                       <includes>linux64/**/*.*</includes>
                     </artifactItem>
                     <artifactItem>
                       <groupId>be.yildiz-games</groupId>
                       <artifactId>component-native-physicsfs</artifactId>
+                      <version>${component-physfs.version}</version>
                       <outputDirectory>src/main/scripts/linux64/physicsfs</outputDirectory>
                       <includes>linux64/**/*.*</includes>
                     </artifactItem>
                     <artifactItem>
                       <groupId>be.yildiz-games</groupId>
                       <artifactId>component-native-alsa</artifactId>
+                      <version>${component-alsa.version}</version>
                       <outputDirectory>src/main/scripts/linux64/alsa</outputDirectory>
                       <includes>linux64/**/*.*</includes>
                     </artifactItem>
