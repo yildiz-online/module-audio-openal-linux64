@@ -1,5 +1,4 @@
 cmake_minimum_required (VERSION 3.0.0)
-
 project (yildiz_native_openal)
 
 set(CMAKE_CXX_FLAGS "-O2 -fPIC -std=gnu++11")
@@ -14,6 +13,8 @@ include_directories("java/include")
 include_directories("java/include/linux")
 include_directories(${LIBSNDFILE_INCLUDE_DIR})
 
+
+
 file(
         GLOB_RECURSE
         source_files
@@ -25,5 +26,6 @@ file(
 add_library(yildizopenal SHARED ${source_files})
 
 target_link_libraries(yildizopenal ${OPENAL_LIBRARY})
-target_link_libraries(yildizopenal ${PHYSFS_LIBRARY})
+target_link_libraries(yildizopenal ${CMAKE_SOURCE_DIR}/physicsfs-native/linux64/lib/libphysfs.a))
+target_link_libraries(yildizopenal ${CMAKE_SOURCE_DIR}/physicsfs/linux64/libyildizphysfs.so)
 target_link_libraries(yildizopenal ${LIBSNDFILE_LIBRARY})

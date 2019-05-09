@@ -6,7 +6,7 @@ cmake . \
 -DOPENAL_INCLUDE_DIR="openal/linux64/include/AL" \
 -DOPENAL_LIBRARY="openal/linux64/lib/libopenal.so" \
 -DPHYSFS_INCLUDE_DIR="physicsfs/linux64/include" \
--DPHYSFS_LIBRARY="physicsfs/linux64/lib/libphysfs.so" \
+-DPHYSFS_LIBRARY="physicsfs/linux64/libyildizphysfs.so" \
 -DLIBRARY_OUTPUT_PATH="../../../../target/classes/linux64" \
 -G "Unix Makefiles"
 
@@ -30,6 +30,6 @@ rm -r physicsfs
 rm -r alsa
 rm -r ../../c++
 rm -r ../../includes
-rm -r ../win64
+rm -r ../linux64
 
 return $r1
