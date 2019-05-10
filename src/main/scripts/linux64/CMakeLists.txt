@@ -26,6 +26,5 @@ file(
 add_library(yildizopenal SHARED ${source_files})
 
 target_link_libraries(yildizopenal ${OPENAL_LIBRARY})
-target_link_libraries(yildizopenal ${CMAKE_SOURCE_DIR}/physicsfs-native/linux64/lib/libphysfs.a)
 target_link_libraries(yildizopenal ${CMAKE_SOURCE_DIR}/physicsfs/linux64/libyildizphysfs.so)
 target_link_libraries(yildizopenal ${LIBSNDFILE_LIBRARY})
