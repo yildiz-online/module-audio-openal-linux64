@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 cmake . \
 -DCMAKE_MODULE_PATH=. \
 -DCMAKE_BUILD_TYPE=Release \
@@ -32,4 +34,4 @@ rm -r ../../c++
 rm -r ../../includes
 rm -r ../linux64
 
-return $r1
+exit $r1
