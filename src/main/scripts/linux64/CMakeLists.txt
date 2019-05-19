@@ -14,7 +14,6 @@ include_directories("java/include/linux")
 include_directories(${LIBSNDFILE_INCLUDE_DIR})
 
 
-
 file(
         GLOB_RECURSE
         source_files
