@@ -53,8 +53,8 @@
 
   <properties>
     <nativeEnv>linux64</nativeEnv>
-    <module-openal.version>2.0.12</module-openal.version>
-    <module-physfs.version>1.0.0-SNAPSHOT</module-physfs.version>
+    <module-openal.version>2.0.13-SNAPSHOT</module-openal.version>
+    <module-physfs-linux64.version>1.0.0-SNAPSHOT</module-physfs-linux64.version>
     <component-physfs.version>3.0.1.1</component-physfs.version>
     <component-alsa.version>1.1.5.3</component-alsa.version>
     <component-openal.version>1.18.1.1</component-openal.version>
@@ -86,7 +86,7 @@
         <dependency>
           <groupId>be.yildiz-games</groupId>
           <artifactId>module-vfs-physfs-linux64</artifactId>
-          <version>${module-physfs.version}</version>
+          <version>${module-physfs-linux64.version}</version>
         </dependency>
         <dependency>
           <groupId>be.yildiz-games</groupId>
@@ -123,7 +123,7 @@
                     <artifactItem>
                       <groupId>be.yildiz-games</groupId>
                       <artifactId>module-vfs-physfs-linux64</artifactId>
-                      <version>${module-physfs.version}</version>
+                      <version>${module-physfs-linux64.version}</version>
                       <outputDirectory>src/main/scripts/linux64/physicsfs</outputDirectory>
                       <includes>linux64/**/*.*</includes>
                     </artifactItem>
