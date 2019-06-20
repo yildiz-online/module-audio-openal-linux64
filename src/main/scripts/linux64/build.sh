@@ -34,4 +34,4 @@ rm -r ../../c++
 rm -r ../../includes
 rm -r ../linux64
 
-exit $r1
+exit ${r1}
